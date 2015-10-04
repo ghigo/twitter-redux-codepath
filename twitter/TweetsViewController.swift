@@ -10,8 +10,14 @@ import UIKit
 
 class TweetsViewController: UIViewController {
 
+    var tweets: [Tweet]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        TwitterClient.sharedInstance.homeTimelineWithCompletion(nil) { (tweets, error) -> () in
+            self.tweets = tweets
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +27,9 @@ class TweetsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onLogout(sender: AnyObject) {
+        User.currentUser?.logout()
+    }
 
     /*
     // MARK: - Navigation
