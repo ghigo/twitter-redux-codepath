@@ -17,7 +17,7 @@ class TweetTableViewCell: UITableViewCell {
     
     var tweet: Tweet! {
         didSet {
-            userName.text = tweet.user?.screenname
+            userName.text = tweet.user?.name
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "hh:mm"
             timestamp.text = dateFormatter.stringFromDate(tweet.createdAt!)
