@@ -25,8 +25,7 @@ class User: NSObject {
         
         name = dictionary["name"] as? String
         screenname = dictionary["screenname"] as? String
-        profileImageUrl = dictionary["profileImageUrl"] as? String
-        profileImageUrl = dictionary["profileImageUrl"] as? String
+        profileImageUrl = dictionary["profile_image_url"] as? String
         tagLine = dictionary["tagLine"] as? String
     }
     

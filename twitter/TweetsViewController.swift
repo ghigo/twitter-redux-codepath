@@ -11,6 +11,7 @@ import UIKit
 class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var tweets: [Tweet]?
+    let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,13 +20,11 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.insertSubview(refreshControl, atIndex: 0)
       
-        TwitterClient.sharedInstance.homeTimelineWithCompletion(nil) { (tweets, error) -> () in
-            self.tweets = tweets
-            self.tableView.reloadData()
-        }
-
-        // Do any additional setup after loading the view.
+        refresh()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +49,14 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.tweet = tweets?[indexPath.row]
         
         return cell
+    }
+    
+    func refresh() {
+        TwitterClient.sharedInstance.homeTimelineWithCompletion(nil) { (tweets, error) -> () in
+            self.refreshControl.endRefreshing()
+            self.tweets = tweets
+            self.tableView.reloadData()
+        }
     }
 
     /*
