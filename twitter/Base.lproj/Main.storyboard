@@ -31,14 +31,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="Pln-6G-f2c" kind="show" identifier="loginSegue" id="KIA-lk-X2G"/>
+                        <segue destination="7VJ-fx-NhS" kind="show" identifier="loginSegue" id="KIA-lk-X2G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="490" y="524"/>
         </scene>
-        <!--Tweets View Controller-->
+        <!--yo!-->
         <scene sceneID="LaV-Fg-TJE">
             <objects>
                 <viewController storyboardIdentifier="TweetsViewController" id="Pln-6G-f2c" customClass="TweetsViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,19 +50,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kq-TK-gMi">
-                                <rect key="frame" x="276" y="285" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="onLogout:" destination="Pln-6G-f2c" eventType="touchUpInside" id="eh1-pG-hOr"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="201" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U5t-Dy-GUG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="201" id="x2E-em-nu9" customClass="TweetTableViewCell" customModule="twitter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="201"/>
+                                        <rect key="frame" x="0.0" y="92" width="600" height="201"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x2E-em-nu9" id="ebf-p5-AcI">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="200.5"/>
@@ -131,17 +124,45 @@
                         <constraints>
                             <constraint firstItem="U5t-Dy-GUG" firstAttribute="leading" secondItem="aUf-iX-WiT" secondAttribute="leading" id="5iz-Sz-Wrb"/>
                             <constraint firstItem="iOx-DT-6MO" firstAttribute="top" secondItem="U5t-Dy-GUG" secondAttribute="bottom" id="AlM-d8-Le2"/>
-                            <constraint firstItem="2kq-TK-gMi" firstAttribute="centerY" secondItem="aUf-iX-WiT" secondAttribute="centerY" id="J1u-g8-Ga4"/>
-                            <constraint firstItem="2kq-TK-gMi" firstAttribute="centerX" secondItem="aUf-iX-WiT" secondAttribute="centerX" id="VpA-YC-oo6"/>
                             <constraint firstAttribute="trailing" secondItem="U5t-Dy-GUG" secondAttribute="trailing" id="c9D-HX-gql"/>
                             <constraint firstItem="U5t-Dy-GUG" firstAttribute="top" secondItem="aUf-iX-WiT" secondAttribute="top" id="khq-8E-gkl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="yo!" id="qDY-eL-odE">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="2oq-4k-aKL">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2kq-TK-gMi">
+                                <rect key="frame" x="532" y="7" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="Pln-6G-f2c" eventType="touchUpInside" id="eh1-pG-hOr"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="U5t-Dy-GUG" id="eqc-gE-dBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWB-mb-iNZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="524"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fHG-4V-yBP">
+            <objects>
+                <navigationController storyboardIdentifier="TweetsViewAndNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="7VJ-fx-NhS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XBA-2v-XS3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pln-6G-f2c" kind="relationship" relationship="rootViewController" id="ZYk-0W-Xve"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BgK-DA-Sbo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1196" y="524"/>
         </scene>
