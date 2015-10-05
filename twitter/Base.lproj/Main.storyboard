@@ -52,15 +52,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="147" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U5t-Dy-GUG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U5t-Dy-GUG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="147" id="x2E-em-nu9" customClass="TweetTableViewCell" customModule="twitter" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="147"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="122" id="x2E-em-nu9" customClass="TweetTableViewCell" customModule="twitter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x2E-em-nu9" id="ebf-p5-AcI">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="146.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="121.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fvT-Yv-4Ix">
@@ -93,21 +93,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koD-Ae-WCP">
-                                                    <rect key="frame" x="8" y="108" width="56" height="30"/>
+                                                    <rect key="frame" x="8" y="83" width="56" height="30"/>
                                                     <state key="normal" title="Retweet"/>
                                                     <connections>
                                                         <action selector="retweet:" destination="x2E-em-nu9" eventType="touchUpInside" id="Oq9-Jq-gPS"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UO2-ar-iAM">
-                                                    <rect key="frame" x="72" y="108" width="55" height="30"/>
+                                                    <rect key="frame" x="72" y="83" width="55" height="30"/>
                                                     <state key="normal" title="Favorite"/>
                                                     <connections>
                                                         <action selector="favorite:" destination="x2E-em-nu9" eventType="touchUpInside" id="6fb-q8-TvO"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyz-1a-vfm">
-                                                    <rect key="frame" x="135" y="108" width="39" height="30"/>
+                                                    <rect key="frame" x="135" y="83" width="39" height="30"/>
                                                     <state key="normal" title="Reply"/>
                                                     <connections>
                                                         <segue destination="ITi-0F-l9T" kind="show" identifier="replySegue" id="fgR-yl-6R4"/>
