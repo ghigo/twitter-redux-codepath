@@ -44,5 +44,19 @@ class TweetTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func retweet(sender: AnyObject) {
+        TwitterClient.sharedInstance.retweet(self.tweet.tweetId!) { (tweet, error) -> () in
+            print("success")
+        }
+    }
+    
+    @IBAction func favorite(sender: AnyObject) {
+        //        let params = ["id": tweet.tweetId] as NSDictionary
+        var params = [String: Int]()
+        params["id"] = tweet.tweetId
+        TwitterClient.sharedInstance.favorite(params) { (tweet, error) -> () in
+            print("done")
+        }
+    }
 }

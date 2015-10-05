@@ -70,6 +70,11 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             let vc = segue.destinationViewController as! DetailsViewController
             let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
             vc.tmpTweet = tweets![(indexPath?.row)!]
+        } else if segue.identifier == "replySegue" {
+//            let vc = segue.destinationViewController as! ComposeViewController
+//            let indexPath = tableView.indexPathForCell(sender as! UIButton)
+//            vc.replyToTweet = tweets![(indexPath?.row)!]
+            // todo: find the right Tweet to pass
         }
         
     }
