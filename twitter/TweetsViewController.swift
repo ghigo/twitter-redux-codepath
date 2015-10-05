@@ -59,6 +59,11 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
 
+    @IBAction func composeTweet(sender: AnyObject) {
+        
+    }
+    
+
     /*
     // MARK: - Navigation
 

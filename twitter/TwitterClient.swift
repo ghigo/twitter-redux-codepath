@@ -40,6 +40,7 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
         
     }
     
+    // Login
     func loginWithCompletion(completion: (user: User?, error: NSError?) -> ()) {
         loginCompletion = completion
         
@@ -55,6 +56,7 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
         }
     }
     
+    // Verify credentials
     func openURL(url: NSURL) {
         fetchAccessTokenWithPath("oauth/access_token", method: "POST", requestToken: BDBOAuth1Credential (queryString: url.query), success: { (accessToken: BDBOAuth1Credential!) -> Void in
             print("Got the access token!")
@@ -65,13 +67,30 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
                 User.currentUser = user
                 print("user: \(user.name!)")
                 self.loginCompletion?(user: user, error: nil) 
-                }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in                        print("error getting current user: \(error)")
+                }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                    print("error getting current user: \(error)")
                     self.loginCompletion?(user: nil, error: error)
             })
             
             }) { (error: NSError!) -> Void in
                 print("Failed to receive access token: \(error)")
                 self.loginCompletion?(user: nil, error: error)
+        }
+    }
+    
+    // Status update
+    func statusUpdate(params: NSDictionary?, completion: (tweet: Tweet?, error: NSError?) -> ()) {
+        if params?["status"] != nil {
+            POST("1.1/statuses/update.json", parameters: params, constructingBodyWithBlock: nil, success: { (request: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+                print("Status update succeeded: \(response)")
+                let tweet = Tweet.init(dictionary: response as! NSDictionary)
+                completion(tweet: tweet, error: nil)
+            }) { (request: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                print("Status update failed: \(error)")
+                
+            }
+        } else {
+            // Return error
         }
     }
 }
