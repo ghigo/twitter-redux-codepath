@@ -20,6 +20,7 @@
 		FE32980F1BC1073800164739 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE32980E1BC1073800164739 /* TweetsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FE3298151BC1178100164739 /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3298141BC1178100164739 /* TweetTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		FE3298181BC21C7600164739 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3298171BC21C7600164739 /* ComposeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FE32981A1BC23FDF00164739 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3298191BC23FDF00164739 /* DetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		FE32980E1BC1073800164739 /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 		FE3298141BC1178100164739 /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		FE3298171BC21C7600164739 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		FE3298191BC23FDF00164739 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				FE197D461BC088F100E6F4D4 /* ViewController.swift */,
 				FE32980E1BC1073800164739 /* TweetsViewController.swift */,
 				FE3298171BC21C7600164739 /* ComposeViewController.swift */,
+				FE3298191BC23FDF00164739 /* DetailsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				FE197D471BC088F100E6F4D4 /* ViewController.swift in Sources */,
 				FE3298081BC0A18E00164739 /* TwitterClient.swift in Sources */,
+				FE32981A1BC23FDF00164739 /* DetailsViewController.swift in Sources */,
 				FE32980F1BC1073800164739 /* TweetsViewController.swift in Sources */,
 				FE3298181BC21C7600164739 /* ComposeViewController.swift in Sources */,
 				FE197D451BC088F100E6F4D4 /* AppDelegate.swift in Sources */,
