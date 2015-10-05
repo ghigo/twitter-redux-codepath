@@ -87,10 +87,34 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
                 completion(tweet: tweet, error: nil)
             }) { (request: AFHTTPRequestOperation!, error: NSError!) -> Void in
                 print("Status update failed: \(error)")
-                
+                completion(tweet: nil, error: error)
             }
         } else {
             // Return error
+        }
+    }
+    
+    // Retweet
+    func retweet(id: Int, completion: (tweet: Tweet?, error: NSError?) -> ()) {
+        POST("1.1/statuses/retweet/\(id).json", parameters: nil, constructingBodyWithBlock: nil, success: { (request: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            print("Retweet succeeded")
+            let tweet = Tweet.init(dictionary: response as! NSDictionary)
+            completion(tweet: tweet, error: nil)
+            }) { (request: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                print("Retweet failed")
+                completion(tweet: nil, error: error)
+        }
+    }
+    
+    // Favorite
+    func favorite(params: NSDictionary?, completion: (tweet: Tweet?, error: NSError?) -> ()) {
+        POST("1.1/favorites/create.json", parameters: params, constructingBodyWithBlock: nil, success: { (request: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+            print("Favorite succeeded")
+            let tweet = Tweet.init(dictionary: response as! NSDictionary)
+            completion(tweet: tweet, error: nil)
+            }) { (request: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                print("Favorite failed")
+                completion(tweet: nil, error: error)
         }
     }
 }

@@ -58,10 +58,6 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.tableView.reloadData()
         }
     }
-
-    @IBAction func composeTweet(sender: AnyObject) {
-        
-    }
     
 
     // MARK: - Navigation

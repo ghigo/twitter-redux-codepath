@@ -11,6 +11,9 @@ import UIKit
 let tweetPostedNotification = "tweetPosted"
 
 class ComposeViewController: UIViewController {
+    
+    var replyToTweet: Tweet?
+    
     @IBOutlet weak var messageTextView: UITextView!
 
     override func viewDidLoad() {
@@ -19,6 +22,10 @@ class ComposeViewController: UIViewController {
         messageTextView.becomeFirstResponder()
 
         // Do any additional setup after loading the view.
+        if replyToTweet != nil {
+            let screenname = replyToTweet?.user?.screenname as String!
+            messageTextView.text = "@\(screenname) "
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +36,10 @@ class ComposeViewController: UIViewController {
     @IBAction func createNewTweet(sender: AnyObject) {
         let message = messageTextView.text
         if message != nil {
-            let params = ["status": message]
+            var params = ["status": message]
+            if self.replyToTweet != nil {
+                params["in_reply_to_status_id"] = "\(self.replyToTweet?.tweetId)"
+            }
             TwitterClient.sharedInstance.statusUpdate(params) { (tweet, error) -> () in
                 if tweet != nil {
                     print("Message posted successfully: \(tweet)")

@@ -43,15 +43,31 @@ class DetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func retweet(sender: AnyObject) {
+        TwitterClient.sharedInstance.retweet(self.tweet.tweetId!) { (tweet, error) -> () in
+            print("success")
+        }
+    }
 
-    /*
+    @IBAction func favorite(sender: AnyObject) {
+//        let params = ["id": tweet.tweetId] as NSDictionary
+        var params = [String: Int]()
+        params["id"] = tweet.tweetId
+        TwitterClient.sharedInstance.favorite(params) { (tweet, error) -> () in
+            print("done")
+        }
+    }
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "replySegue" {
+            let vc = segue.destinationViewController as! ComposeViewController
+            vc.replyToTweet = tweet
+        }
     }
-    */
 
 }
