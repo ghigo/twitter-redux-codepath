@@ -16,7 +16,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var profileNavigationController: UIViewController!
     
     var viewControllers: [UIViewController] = []
-    let titles = ["Timeline", "Profile"]
+    let titles = ["Timeline", "Profile", "Mentions"]
     
     var hamburgerViewController: HamburgerViewController!
     
@@ -42,7 +42,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewControllers.count
+//        return viewControllers.count
+        return 3
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
