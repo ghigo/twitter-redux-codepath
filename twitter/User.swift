@@ -16,8 +16,12 @@ let userDidLogoutNotification = "userDidLogoutNotification"
 class User: NSObject {
     var name: String?
     var screenname: String?
+    var profileBannerUrl: String?
     var profileImageUrl: String?
     var tagLine: String?
+    var tweets: Int?
+    var following: Int?
+    var followers: Int?
     var dictionary: NSDictionary
     
     init(dictionary: NSDictionary) {
@@ -26,7 +30,11 @@ class User: NSObject {
         name = dictionary["name"] as? String
         screenname = dictionary["screen_name"] as? String
         profileImageUrl = dictionary["profile_image_url"] as? String
+        profileBannerUrl = dictionary["profile_banner_url"] as? String
         tagLine = dictionary["tagLine"] as? String
+        tweets = dictionary["statuses_count"] as? Int
+        followers = dictionary["followers_count"] as? Int
+        following = dictionary["friends_count"] as? Int
     }
     
     func logout() {
@@ -38,19 +46,19 @@ class User: NSObject {
     
     class var currentUser: User? {
         get {
-            if _currentUser == nil {
-                let data = NSUserDefaults.standardUserDefaults().objectForKey(currentUserKey) as? NSData
-                if data != nil {
-                    do {
-                        let dictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                            _currentUser = User(dictionary: dictionary)
-                    } catch {
-                        print("undefined error while retrieving currentUser")
-                    }
-
-                }
-            }
-            return _currentUser
+        if _currentUser == nil {
+        let data = NSUserDefaults.standardUserDefaults().objectForKey(currentUserKey) as? NSData
+        if data != nil {
+        do {
+        let dictionary = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+        _currentUser = User(dictionary: dictionary)
+    } catch {
+        print("undefined error while retrieving currentUser")
+        }
+        
+        }
+        }
+        return _currentUser
         }
         set(user) {
             _currentUser = user
@@ -59,7 +67,7 @@ class User: NSObject {
                 do {
                     let data = try NSJSONSerialization.dataWithJSONObject(user!.dictionary, options: NSJSONWritingOptions.PrettyPrinted)
                     NSUserDefaults.standardUserDefaults().setObject(data, forKey: currentUserKey)
-
+                    
                 } catch {
                     print("undefined error while saving currentUser")
                 }

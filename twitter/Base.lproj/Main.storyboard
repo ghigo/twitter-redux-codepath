@@ -521,6 +521,94 @@
             </objects>
             <point key="canvasLocation" x="-886" y="-192"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Fs1-ME-Wed">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="31a-R8-AS9" customClass="ProfileViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AUs-1U-eXw"/>
+                        <viewControllerLayoutGuide type="bottom" id="art-lZ-koJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KSU-tV-4fC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Odi-tJ-VJa">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="WnI-0j-Lf8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBe-qr-aOe">
+                                <rect key="frame" x="20" y="272" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EG7-TL-qDW">
+                                <rect key="frame" x="20" y="301" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-VH-RKL">
+                                <rect key="frame" x="20" y="330" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EG7-TL-qDW" secondAttribute="trailing" constant="20" id="3RB-z5-4Lc"/>
+                            <constraint firstItem="Odi-tJ-VJa" firstAttribute="leading" secondItem="KSU-tV-4fC" secondAttribute="leading" id="5BT-zK-TwM"/>
+                            <constraint firstItem="NBe-qr-aOe" firstAttribute="top" secondItem="Odi-tJ-VJa" secondAttribute="bottom" constant="8" id="6Qx-at-7Ss"/>
+                            <constraint firstAttribute="trailing" secondItem="NBe-qr-aOe" secondAttribute="trailing" constant="20" id="7ge-aI-Mdb"/>
+                            <constraint firstAttribute="trailing" secondItem="Odi-tJ-VJa" secondAttribute="trailing" id="9wX-IB-Dxz"/>
+                            <constraint firstItem="EG7-TL-qDW" firstAttribute="leading" secondItem="KSU-tV-4fC" secondAttribute="leading" constant="20" id="Gnl-RC-dnC"/>
+                            <constraint firstItem="Odi-tJ-VJa" firstAttribute="top" secondItem="AUs-1U-eXw" secondAttribute="bottom" id="Ix4-Cr-XCQ"/>
+                            <constraint firstItem="EG7-TL-qDW" firstAttribute="top" secondItem="NBe-qr-aOe" secondAttribute="bottom" constant="8" id="M40-uB-ARt"/>
+                            <constraint firstItem="NBe-qr-aOe" firstAttribute="leading" secondItem="KSU-tV-4fC" secondAttribute="leading" constant="20" id="POI-DM-ig7"/>
+                            <constraint firstItem="Qf0-VH-RKL" firstAttribute="top" secondItem="EG7-TL-qDW" secondAttribute="bottom" constant="8" id="PdL-FR-1ns"/>
+                            <constraint firstAttribute="trailing" secondItem="Qf0-VH-RKL" secondAttribute="trailing" constant="20" id="TMP-bj-UcK"/>
+                            <constraint firstItem="Qf0-VH-RKL" firstAttribute="leading" secondItem="KSU-tV-4fC" secondAttribute="leading" constant="20" id="hHm-qg-tzY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZOq-lP-O4F">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="OyB-hR-UDH">
+                            <connections>
+                                <action selector="showMenu:" destination="31a-R8-AS9" id="9jf-fI-A97"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="FollowersCountLabel" destination="Qf0-VH-RKL" id="FaQ-2L-E6Q"/>
+                        <outlet property="followingCountLabel" destination="EG7-TL-qDW" id="oO4-f9-KxB"/>
+                        <outlet property="headerImage" destination="Odi-tJ-VJa" id="abs-Rj-Sr5"/>
+                        <outlet property="tweetsCountLabel" destination="NBe-qr-aOe" id="esF-SW-SIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHi-3O-94e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="-248"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6O2-nv-4ie">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="8ta-ij-j0t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pSg-eI-WJb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="31a-R8-AS9" kind="relationship" relationship="rootViewController" id="SK4-sF-qSo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yK3-Ex-THZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1196" y="-248"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="b4j-uy-dvk"/>

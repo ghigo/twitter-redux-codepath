@@ -25,6 +25,7 @@
 		FEE02B461BCB8DD8001C85CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE02B451BCB8DD8001C85CD /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FEE02B481BCB8DE1001C85CD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE02B471BCB8DE1001C85CD /* FirstViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FEE02B4B1BCB8E2B001C85CD /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE02B4A1BCB8E2B001C85CD /* MenuCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FEE02B4D1BCB93EE001C85CD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE02B4C1BCB93EE001C85CD /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		FEE02B451BCB8DD8001C85CD /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FEE02B471BCB8DE1001C85CD /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		FEE02B4A1BCB8E2B001C85CD /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		FEE02B4C1BCB93EE001C85CD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				FE32980E1BC1073800164739 /* TweetsViewController.swift */,
 				FE3298171BC21C7600164739 /* ComposeViewController.swift */,
 				FE3298191BC23FDF00164739 /* DetailsViewController.swift */,
+				FEE02B4C1BCB93EE001C85CD /* ProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				FE3298081BC0A18E00164739 /* TwitterClient.swift in Sources */,
 				FE32981A1BC23FDF00164739 /* DetailsViewController.swift in Sources */,
 				FEE02B481BCB8DE1001C85CD /* FirstViewController.swift in Sources */,
+				FEE02B4D1BCB93EE001C85CD /* ProfileViewController.swift in Sources */,
 				FE32980F1BC1073800164739 /* TweetsViewController.swift in Sources */,
 				FEE02B461BCB8DD8001C85CD /* MenuViewController.swift in Sources */,
 				FE3298181BC21C7600164739 /* ComposeViewController.swift in Sources */,

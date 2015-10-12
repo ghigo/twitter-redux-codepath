@@ -12,9 +12,12 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var firstNavigationController: UIViewController!
+    private var tweetsNavigationController: UIViewController!
+    private var profileNavigationController: UIViewController!
     
     var viewControllers: [UIViewController] = []
+    let titles = ["Timeline", "Profile"]
+    
     var hamburgerViewController: HamburgerViewController!
     
     override func viewDidLoad() {
@@ -24,9 +27,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        firstNavigationController = storyboard.instantiateViewControllerWithIdentifier("FirstNavigationController")
+        tweetsNavigationController = storyboard.instantiateViewControllerWithIdentifier("TweetsViewAndNavigationController")
+        viewControllers.append(tweetsNavigationController)
+        profileNavigationController = storyboard.instantiateViewControllerWithIdentifier("ProfileNavigationController")
+        viewControllers.append(profileNavigationController)
         
-        viewControllers.append(firstNavigationController)
         
 //        hamburgerViewController.contentViewController = firstNavigationController
     }
@@ -42,7 +47,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuCell
-        let titles = ["First view"]
         cell.menuTitleLabel.text = titles[indexPath.row]
         return cell
     }
