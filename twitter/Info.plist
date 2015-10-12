@@ -24,7 +24,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>twitter</string>
+			<string>com.optimizely.twitter</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>cptwitterdemo</string>

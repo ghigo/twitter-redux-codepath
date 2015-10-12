@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BB2C6D3EAE5DBA2A8185446B /* libPods-twitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C370A405841CE066C16F1CB4 /* libPods-twitter.a */; };
-		E4588B3A34F2BA638BFA8E7C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2786DBF12A0E326B6139811 /* libPods.a */; };
 		FE197D451BC088F100E6F4D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE197D441BC088F100E6F4D4 /* AppDelegate.swift */; };
 		FE197D471BC088F100E6F4D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE197D461BC088F100E6F4D4 /* ViewController.swift */; };
 		FE197D4A1BC088F100E6F4D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE197D481BC088F100E6F4D4 /* Main.storyboard */; };
@@ -30,7 +29,6 @@
 /* Begin PBXFileReference section */
 		67ADF715CFBCC3796E960C8C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		96C04F51295C7CD4993B27F3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		A2786DBF12A0E326B6139811 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C370A405841CE066C16F1CB4 /* libPods-twitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-twitter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE197D411BC088F100E6F4D4 /* twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE197D441BC088F100E6F4D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB2C6D3EAE5DBA2A8185446B /* libPods-twitter.a in Frameworks */,
-				E4588B3A34F2BA638BFA8E7C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				C370A405841CE066C16F1CB4 /* libPods-twitter.a */,
-				A2786DBF12A0E326B6139811 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
