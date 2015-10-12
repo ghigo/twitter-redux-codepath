@@ -8,6 +8,8 @@
 
 import UIKit
 
+var _globalNavigationController: HamburgerViewController?
+
 class HamburgerViewController: UIViewController {
     
     // Views
@@ -57,6 +59,7 @@ class HamburgerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        _globalNavigationController = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,6 +88,12 @@ class HamburgerViewController: UIViewController {
             })
         }
         
+    }
+    
+    class var globalNavigationController: HamburgerViewController? {
+        get {
+            return _globalNavigationController
+        }
     }
 
 }

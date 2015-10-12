@@ -55,13 +55,22 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let viewToShow = viewControllers[indexPath.row]
         hamburgerViewController.contentViewController = viewToShow
         
-//        if viewToShow.isKindOfClass(ProfileViewController) {
         if let topView = (viewToShow as? UINavigationController)?.topViewController {
             if topView.isKindOfClass(ProfileViewController) {
                 (topView as! ProfileViewController).user = User.currentUser
             }
         }
         
+    }
+    
+    func navigateToProfile(user: User) {
+        let viewToShow = profileNavigationController
+        hamburgerViewController.contentViewController = viewToShow
+        if let topView = (viewToShow as? UINavigationController)?.topViewController {
+            if topView.isKindOfClass(ProfileViewController) {
+                (topView as! ProfileViewController).user = user
+            }
+        }
     }
     
 //    @IBAction func showFirstView(sender: AnyObject) {

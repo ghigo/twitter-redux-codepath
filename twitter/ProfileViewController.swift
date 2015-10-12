@@ -10,10 +10,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    weak var navigationDelegate: AnyObject?
+    
     var user: User! {
         didSet {
-            headerImage.setImageWithURL(NSURL(string: (user?.profileBannerUrl)!))
             if (user != nil) {
+                if (user!.profileBannerUrl != nil) {
+                    headerImage.setImageWithURL(NSURL(string: (user?.profileBannerUrl)!))
+                } else {
+                    headerImage.setImageWithURL(NSURL(string: ""))
+                }
                 tweetsCountLabel.text = "\(user!.tweets!) Tweets"
                 followingCountLabel.text = "\(user!.following!) Following"
                 FollowersCountLabel.text = "\(user!.followers!) Followers"

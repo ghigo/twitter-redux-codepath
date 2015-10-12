@@ -63,8 +63,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="121.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fvT-Yv-4Ix">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fvT-Yv-4Ix">
                                                     <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                                    <gestureRecognizers/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="F6i-MF-xQi"/>
                                                         <constraint firstAttribute="height" constant="40" id="n4z-WA-ygK"/>
@@ -605,6 +606,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b4j-uy-dvk"/>
+        <segue reference="fgR-yl-6R4"/>
     </inferredMetricsTieBreakers>
 </document>

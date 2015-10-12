@@ -12,6 +12,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     var tweets: [Tweet]?
     let refreshControl = UIRefreshControl()
+    weak var navigationDelegate: AnyObject?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -49,6 +50,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TweetCell", forIndexPath: indexPath) as! TweetTableViewCell
         cell.tweet = tweets?[indexPath.row]
+        cell.navigationDelegate = self.navigationDelegate
         
         return cell
     }
