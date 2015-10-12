@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -367,7 +367,7 @@
         <!--Hamburger View Controller-->
         <scene sceneID="ggn-4z-F21">
             <objects>
-                <viewController id="dDd-7H-TXB" customClass="HamburgerViewController" customModule="hamburger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dDd-7H-TXB" customClass="HamburgerViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9yy-uE-qo8"/>
                         <viewControllerLayoutGuide type="bottom" id="2nh-sy-TSX"/>
@@ -419,7 +419,7 @@
         <!--Menu View Controller-->
         <scene sceneID="ZTl-Xg-bJZ">
             <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="AYQ-ZW-wZN" customClass="MenuViewController" customModule="hamburger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="AYQ-ZW-wZN" customClass="MenuViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MYV-HS-Vl2"/>
                         <viewControllerLayoutGuide type="bottom" id="up2-1v-n10"/>
@@ -432,7 +432,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="eTP-uR-aRY" customClass="MenuCell" customModule="hamburger" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCell" id="eTP-uR-aRY" customClass="MenuCell" customModule="twitter" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eTP-uR-aRY" id="4vt-Nw-3zk">

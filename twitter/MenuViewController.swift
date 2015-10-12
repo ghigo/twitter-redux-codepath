@@ -28,7 +28,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         viewControllers.append(firstNavigationController)
         
-        hamburgerViewController.contentViewController = firstNavigationController
+//        hamburgerViewController.contentViewController = firstNavigationController
     }
 
     override func didReceiveMemoryWarning() {
