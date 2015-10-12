@@ -13,9 +13,12 @@ class ProfileViewController: UIViewController {
     var user: User! {
         didSet {
             headerImage.setImageWithURL(NSURL(string: (user?.profileBannerUrl)!))
-            tweetsCountLabel.text = "\(user?.tweets) Tweets"
-            followingCountLabel.text = "\(user?.following) Following"
-            FollowersCountLabel.text = "\(user?.followers) Followers"
+            if (user != nil) {
+                tweetsCountLabel.text = "\(user!.tweets!) Tweets"
+                followingCountLabel.text = "\(user!.following!) Following"
+                FollowersCountLabel.text = "\(user!.followers!) Followers"
+                self.title = user!.name!
+            }
         }
     }
     

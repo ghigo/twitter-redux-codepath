@@ -573,13 +573,7 @@
                             <constraint firstItem="Qf0-VH-RKL" firstAttribute="leading" secondItem="KSU-tV-4fC" secondAttribute="leading" constant="20" id="hHm-qg-tzY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZOq-lP-O4F">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="OyB-hR-UDH">
-                            <connections>
-                                <action selector="showMenu:" destination="31a-R8-AS9" id="9jf-fI-A97"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ZOq-lP-O4F"/>
                     <connections>
                         <outlet property="FollowersCountLabel" destination="Qf0-VH-RKL" id="FaQ-2L-E6Q"/>
                         <outlet property="followingCountLabel" destination="EG7-TL-qDW" id="oO4-f9-KxB"/>
